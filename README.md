@@ -1,0 +1,2 @@
+# MediTekniikkaProjeckti
+kurssi projeckti
