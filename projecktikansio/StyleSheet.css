@@ -1,3 +1,26 @@
-﻿body
-{
+﻿
+
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
 }
+
+.dark-mode {
+    background-color: #191f2e;
+    color: white;
+}
+
+
+p {
+    color: #b3aca6;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
