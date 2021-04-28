@@ -118,9 +118,15 @@ p {
         padding: 6px;
         border: none;
         margin-top: 8px;
-        margin-right: 16px;
+        margin-right: 6px;
         margin-left: 10px; /**/
         font-size: 17px;
+    }
+
+    #searchbutton {
+        float: left;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
