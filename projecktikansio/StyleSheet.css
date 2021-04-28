@@ -1,7 +1,8 @@
 ﻿
 
 body {
-    padding: 2px;
+    padding: 0;
+    margin: 0;
     background-color: white;
     color: black;
     font-size: 25px;
@@ -85,6 +86,7 @@ p {
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;
+    width: 100%;
     background-color: #222426;
     overflow: hidden;
 }
@@ -98,7 +100,7 @@ p {
         padding: 14px 16px;
         text-decoration: none;
         font-size: 20px;
-        margin-left:5px;/**/
+        
     }
 
         /* Change the color of links on hover */
@@ -107,10 +109,6 @@ p {
             color: black;
         }
 
-
-
-
-     
 
     /* Style the search box inside the navigation bar */
     .topnav input[type=text] {
@@ -143,4 +141,21 @@ p {
     .topnav input[type=text] {
         border: 1px solid #ccc;
     }
+}
+/*just bar*/
+.Header{
+    margin: 0px auto;
+    width: 100%;
+    padding: 30px 15px 20px 25px;
+    z-index: 1; 
+    background-color: rgb(0, 18, 26);
+    color: whitesmoke;
+}
+
+  .main-content {
+    margin: 10px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
+    width: auto;
+    max-width: 940px;
+    z-index: 1;
 }
