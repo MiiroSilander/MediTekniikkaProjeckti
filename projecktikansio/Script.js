@@ -1,9 +1,9 @@
 'use strict';
-
+/*
 let xhr = new XMLHttpRequest();
 // we defined the xhr
  
-/*
+
 xhr.open('POST', 'https://id.twitch.tv/oauth2/token?client_id=9o9l55cbtqtzmpe9dv7hpgqepf99i6&client_secret=b04grht2o906845vru9vac6etbxda3&grant_type=client_credentials', true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send();

@@ -9,14 +9,19 @@
 </head>
 <body class="dark-mode">
 
- <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
- <div class="topnav">
+  <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+  <div class="topnav">
+
     <!-- Use any element to open the sidenav -->
-    <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
     <a href="Kotisivu.html">Home</a>
+    <a class="menu" onclick="openNav()">&#9776; Menu</a>
+    
+
     <div>
         <input id="search" type="text" placeholder="Search">
         <button id="searchbutton">Search</button>
+        <button id="fuckyou">Fuck you</button>
+
     </div>
 </div>
 
@@ -24,10 +29,11 @@
 <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="active" href="About.html">About</a>
+    <a href="About.html">About</a>
     <a href="#">Services</a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
+
 </div>
 
 
