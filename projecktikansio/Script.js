@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 let xhr = new XMLHttpRequest();
 // we defined the xhr
  
@@ -29,8 +29,10 @@ function access() {
 xhr.open('POST', 'https://api.igdb.com/v4/games/');
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.setRequestHeader('Client-ID', '9o9l55cbtqtzmpe9dv7hpgqepf99i6');
-xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-//xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Authorization', 'Bearer ' + 'duhjdb4v4e5jmd7v0443c684giljw4');
+xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS')
+xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
 xhr.send();
 //alert(token);
 }
@@ -71,7 +73,7 @@ function showResult(jsonData) {
     console.log(jsonData);
 }
 
-*/
+
 
 /*let text = '{ "employees" : [' +
     '{ "firstName":"John" , "lastName":"Doe" },' +
