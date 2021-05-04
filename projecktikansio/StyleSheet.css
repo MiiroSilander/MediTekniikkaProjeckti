@@ -100,8 +100,8 @@ p {
         color: #f2f2f2;
         text-align: center;
         padding: 16px 16px;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
         text-decoration: none;
         font-size: 20px;
         cursor: pointer;
@@ -166,8 +166,8 @@ p {
 
   .main-content {
    
-    margin-left: 110px;
-    margin-right: 110px; 
+    margin-left: 150px;
+    margin-right: 150px; 
     padding: 10px 10px 10px 10px;
     width: auto;
     z-index: 1;
