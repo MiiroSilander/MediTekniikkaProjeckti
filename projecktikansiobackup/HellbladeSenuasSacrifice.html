@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hellblade: Senuas Sacrifice</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
+        <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
+        <a href="Kotisivu.html">Home</a>
+
+    </div>
+
+
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="About.html">About</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+    <main class="main-content">
+
+
+        <!--tähän printataan pelit-->
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="gamespage.js"></script>
+
+    <script>
+        let data = '{ "games" : [' +
+
+            '{ "name" : "Hellblade: Senuas Sacrifice" , "url": "https://www.hellblade.com/", "image" : "https://s3.gaming-cdn.com/images/products/872/271x377/hellblade-senuas-sacrifice-cover.jpg", "publisher": "Ninja Theory",  "genres": "Hack and slash, Action adventure", "Developers" : "Ninja Theory", "Platform" : "Playstation 4, Windows", "Ratings" : "PEGI 18", "Realesed" : "8.8.2017", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/fBJ0ifVtK5c" }]}';
+
+
+        let database = JSON.parse(data);
+
+
+        for (let j = 0; j < database.games.length; j++) {
+            mainElementti.innerHTML += `
+                <article id="testi">
+                    <p> Name: ${database.games[j].name} </p>
+                     <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>
+                        <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
+                             <p> publisher: ${database.games[j].publisher}  </p>
+                                <p> genre: ${database.games[j].genres}</p>
+                                    <p> mode: ${database.games[j].Mode}</p>
+                             <p> Developers: ${database.games[j].Developers}</p>
+                            <p> Platform: ${database.games[j].Platform}</p>
+                         <p> Ratings: ${database.games[j].Ratings}</p>
+                    <p> Realesed: ${database.games[j].Realesed}</p>
+                    <p> Trailer: <br>
+                    <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </p>
+
+
+           <p> About game</p>
+                <p>
+                    From the makers of Heavenly Sword, Enslaved: Odyssey to the West, and DmC: Devil May Cry, comes a warrior’s brutal journey into myth and madness.
+
+                    Set in the Viking age, a broken Celtic warrior embarks on a haunting vision quest into Viking Hell to fight for the soul of her dead lover.
+
+                    Created in collaboration with neuroscientists and people who experience psychosis, Hellblade: Senua’s Sacrifice will pull you deep into Senua’s mind.
+                    This Game may contain content not appropriate for all ages, or may not be appropriate for viewing at work: Frequent Violence or Gore, General Mature Content
+                </p>
+
+                 </article>`;
+
+        }
+
+
+    </script>
+
+</body>
+</html>
