@@ -600,3 +600,9 @@ p {
       width: 200px;
       height: 250px;
     }
+
+    #nimet {
+        text-align: left;
+        margin-left: 16px;
+        font-size: 20px;
+    }
