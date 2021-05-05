@@ -18,12 +18,16 @@ body {
 p {
     color: #b3aca6;
     font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 .img-container{
     background: url(https://wallpaperaccess.com/full/3628937.jpg);
     height: 200px;
-    background-position: center ;
+    background-position: 20% 17%;
     background-repeat: no-repeat;
     background-size: cover;
   
@@ -539,6 +543,7 @@ p {
     .slider-img {
       width: 200px;
       height: 250px;
+      margin-bottom: 50px;
     }
 
     .sliderheader{
@@ -546,4 +551,5 @@ p {
       
     }
 
+    
     

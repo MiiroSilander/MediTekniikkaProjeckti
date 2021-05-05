@@ -11,23 +11,31 @@
 
     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
     <div class="topnav">
+        
         <!-- Use any element to open the sidenav -->
-        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
         <a href="Kotisivu.html">Home</a>
+        <a class="menu" onclick="openNav()">&#9776; Menu</a>
+        
 
+        <div class="search_menu">
+            <input id="search" type="text" placeholder="Search">
+            <button id="searchbutton">Search</button>
+            
+
+        </div>
     </div>
 
 
     <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="active" href="About.html">About</a>
-        <a href="SearchPage.html">Search</a>
-        <a href="#">Clients</a>
+        <a href="About.html">About</a> 
         <a href="#">Contact</a>
+        <a href="map.html">Map</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Services</a>
+        
     </div>
-
-
 
     <main class="main-content">
 
@@ -36,6 +44,7 @@
 <script src="gamespage.js"></script>
 
     <script>
+
         let data = '{ "games" : [' +
 
             '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "23.10.2009", "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/v3ZWbpce_Os" }]}';
