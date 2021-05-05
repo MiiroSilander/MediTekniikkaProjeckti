@@ -18,7 +18,10 @@ body {
 p {
     color: #b3aca6;
     font-size: 20px;
-  
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 .img-container{
@@ -548,9 +551,5 @@ p {
       
     }
 
-
-    #nimet {
-        text-align: left;
-        margin-left: 16px;
-        font-size: 20px;
-    }
+    
+    
