@@ -120,7 +120,8 @@ let data = '{ "games" : [' +
     '{ "name" : "Squad" , "url": "https://joinsquad.com/", "image" : "https://upload.wikimedia.org/wikipedia/en/d/de/Squad_%28videogame%29_2016_frontcover.png", "publisher": "Offworld Industries",  "genres": "Firts-person shooter, tactical shooter", "Developers" : "Offworld Industries", "Platform" : "Windows", "Ratings" : "PEGI 16", "Realesed" : "23.9.2020 (Early Access Realese 15.12.2015)", "Mode" : "Multiplayer", "Trailer" : "https://www.youtube.com/embed/UDnUD73gRXk" },' +
     '{ "name" : "The Witcher 3: Wild Hunt" , "url": "https://thewitcher.com/en/witcher3", "image" : "img/TQKAd8U6hnIFQIIcz6qnFh8C.webp", "publisher": "CD Projeckt",  "genres": "Action RPG, Hack and slash", "Developers" : "CD Projeckt Red", "Platform" : "Windows, Playstation 4, Xbox One, Nintendo Switch", "Ratings" : "PEGI 18", "Realesed" : "19.5.2015", "Mode" : "Singleplayer", "Trailer" : "https://www.youtube.com/embed/c0i88t0Kacs" },' +
     '{ "name" : "World of Warcraft" , "url": "https://worldofwarcraft.com/en-us/", "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/WoW_Box_Art1.jpg/220px-WoW_Box_Art1.jpg", "publisher": "Blizzard Entertainment",  "genres": "MMORPG", "Developers" : "Blizzard Entertainment", "Platform" : "Windows, macOS", "Ratings" : "", "Realesed" : "23.11.2004", "Mode" : "Multiplayer", "Trailer" : "https://www.youtube.com/embed/vlVSJ0AvZe0"},' +
-
+    
+    
 
     //ei huomioida tätä alinta. Sulkee listan ja laitetaan viimeisen pelin tiedot tähän.
     '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 4/5, Xbox One, Windows", "Ratings" : "PEGI 18, ESRB: Mature", "Realesed" : "13.9.2019" }]}';

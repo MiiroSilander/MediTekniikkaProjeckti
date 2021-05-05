@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Borderlands 2</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="dark-mode">
+
+     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+     <div class="topnav">
+        
+        <!-- Use any element to open the sidenav -->
+        <a href="Kotisivu.html">Home</a>
+        <a class="menu" onclick="openNav()">&#9776; Menu</a>
+        
+
+        <div class="search_menu">
+            <input id="search" type="text" placeholder="Search">
+            <button id="searchbutton">Search</button>
+            
+
+        </div>
+    </div>
+
+
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="About.html">About</a> 
+        <a href="#">Contact</a>
+        <a href="map.html">Map</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Services</a>
+        
+    </div>
+
+
+
+    <main class="main-content">
+
+
+        <!--tähän printataan pelit-->
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="gamespage.js"></script>
+
+    <script>
+        let data = '{ "games" : [' +
+
+        '{ "name" : "Kingdom Hearts" , "url": "https://www.kingdomhearts.com/3/fi/home/", "image" : "img/KH4.jpg", "publisher": "Square Enix",  "genres": "Action, role-playing", "Developers" : "Square Enix Business Division 3", "Platform" : "PlayStation 4, Xbox One, Microsoft Windows", "Ratings" : "PEGI 12", "Realesed" : 25.1.2019", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/watch?v=2VawSnaxtSI&ab_channel=KINGDOMHEARTS"}]}';
+
+       
+        let database = JSON.parse(data);
+
+
+        for (let j = 0; j < database.games.length; j++) {
+            mainElementti.innerHTML += `
+            <article id="testi">
+                <p> Name: ${database.games[j].name} </p>
+                 <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>
+                    <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
+                         <p> publisher: ${database.games[j].publisher}  </p>
+                            <p> genre: ${database.games[j].genres}</p>
+                                <p> mode: ${database.games[j].Mode}</p>
+                         <p> Developers: ${database.games[j].Developers}</p>
+                        <p> Platform: ${database.games[j].Platform}</p>
+                     <p> Ratings: ${database.games[j].Ratings}</p>
+                <p> Realesed: ${database.games[j].Realesed}</p>
+                <p> Trailer: <br>
+                <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+
+
+       <p> About game</p>
+            <p>
+           A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack. Make new friends, arm them with a bazillion weapons and fight alongside them in 4 player co-op on a relentless quest for revenge and redemption across the undiscovered and unpredictable living planet.
+            </p>
+
+             </article>`;
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
