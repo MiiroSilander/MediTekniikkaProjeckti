@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Home</title>
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide-core.min.css" />
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
@@ -52,25 +53,40 @@
 
 
         <!--tähän printataan pelit-->
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="img/BorderlandsBoxArt.jpg"></img></li>
+                    <li class="splide__slide"><img src="img/Borderlands2boxart3.jpg"></img></li>
+                    <li class="splide__slide"><img src="img/Borderlands_3_Kansi.jpg"></img></li>
+                    <li class="splide__slide"><img src="img/Alanwake.jpg"></img></li>
+                    
+                    <li class="splide__slide"><img src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></li>
 
-        <div class="carousel">
-            <div class="carouselbox">
-              <!-- Random Data will come here  -->
+                </ul>
             </div>
-      
-            <a class="switchLeft sliderButton" onclick="sliderScrollLeft()"><</a>
-            <a class="switchRight sliderButton" onclick="sliderScrollRight()">></a>
-          </div>
+        </div>
       
         
     </main>
     
+    <script>
+        new Splide( '#splide', {
+	type   : 'loop',
+	perPage: 3,
+	perMove: 1,
+} ).mount();
+    </script>
+    
 
- <!-- Just for showing Dynamic Contents :) -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
 
     <!-- scripti komento bodyn ala-osaan-->
+<<<<<<< HEAD
     <script src="Script.js"> </script>
 
+=======
+    <script src="splide-2.4.21/dist/js/splide.min.js"></script>
+    <script src="Script.js"></script>
+>>>>>>> 37c0a6ca1bf741a924ccf5b3820c714fc2b9ee36
 </body>
 </html>
