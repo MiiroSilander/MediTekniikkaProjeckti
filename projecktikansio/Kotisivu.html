@@ -15,8 +15,8 @@
     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
     <div class="topnav">
+        
         <!-- Use any element to open the sidenav -->
-        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
         <a href="Kotisivu.html">Home</a>
         <a class="menu" onclick="openNav()">&#9776; Menu</a>
         
@@ -33,11 +33,12 @@
     <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="About.html">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
+        <a href="About.html">About</a> 
         <a href="#">Contact</a>
         <a href="map.html">Map</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Services</a>
+        
     </div>
 
 
@@ -46,47 +47,66 @@
     <main class="main-content">
 
         <div class="img-container">
-
         </div>
 
+
+
+
         <div class="container">
+
+        <div class="sliderheader">
+        <h3>Hyvät pelit</h3>  
+       </div>
+            
         <!--tähän printataan pelit-->
-        <div class="splide">
+        <div id="splide" class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide"><img class="slider-img" src="img/BorderlandsBoxArt.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Borderlands2boxart3.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Borderlands_3_Kansi.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Alanwake.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/329975-emp.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/220px-WoW_Box_Art1.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Arma_3_kansikuva.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/hellblade-senuas-sacrifice-cover.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Maxpayne2.jpg"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/Squad_(videogame)_2016_frontcover.png"></img></li>
-                    <li class="splide__slide"><img class="slider-img" src="img/KH4.jpg"></img></li>
+                    <li class="splide__slide"><a href="Borderlands_1.html"><img class="slider-img" src="img/BorderlandsBoxArt.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands 2.html"><img class="slider-img" src="img/Borderlands2boxart3.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands 3.html"><img class="slider-img" src="img/Borderlands_3_Kansi.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="AlanWakePage.html"><img class="slider-img" src="img/Alanwake.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="TheWitcher3WildHunt.html"><img class="slider-img" src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></a></li>
+                    <li class="splide__slide"><a href="TheElderScrollsVSkyrim.html"><img class="slider-img" src="img/329975-emp.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="WorldofWarcraft.html"><img class="slider-img" src="img/220px-WoW_Box_Art1.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Arma 3.html"><img class="slider-img" src="img/Arma_3_kansikuva.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="HellbladeSenuasSacrifice.html"><img class="slider-img" src="img/hellblade-senuas-sacrifice-cover.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="MaxPayne2TheFallofMaxPayne.html"><img class="slider-img" src="img/Maxpayne2.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Squad.html"><img class="slider-img" src="img/Squad_(videogame)_2016_frontcover.png"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands_1.html"><img class="slider-img" src="img/KH4.jpg"></img></a></li>
 
                 </ul>
             </div>
         </div>
-        
-        
+
+        <div class="sliderheader">
+            <h3>Comming soon</h3>  
+        </div>
+
+        <div id="splide2" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><a href="Borderlands_1.html"><img class="slider-img" src="img/BorderlandsBoxArt.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands 2.html"><img class="slider-img" src="img/Borderlands2boxart3.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands 3.html"><img class="slider-img" src="img/Borderlands_3_Kansi.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="AlanWakePage.html"><img class="slider-img" src="img/Alanwake.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="TheWitcher3WildHunt.html"><img class="slider-img" src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></a></li>
+                    <li class="splide__slide"><a href="TheElderScrollsVSkyrim.html"><img class="slider-img" src="img/329975-emp.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="WorldofWarcraft.html"><img class="slider-img" src="img/220px-WoW_Box_Art1.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Arma 3.html"><img class="slider-img" src="img/Arma_3_kansikuva.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="HellbladeSenuasSacrifice.html"><img class="slider-img" src="img/hellblade-senuas-sacrifice-cover.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="MaxPayne2TheFallofMaxPayne.html"><img class="slider-img" src="img/Maxpayne2.jpg"></img></a></li>
+                    <li class="splide__slide"><a href="Squad.html"><img class="slider-img" src="img/Squad_(videogame)_2016_frontcover.png"></img></a></li>
+                    <li class="splide__slide"><a href="Borderlands_1.html"><img class="slider-img" src="img/KH4.jpg"></img></a></li>
+
+                </ul>
+            </div>
+        </div>
+
       
         </div>
     </main>
     
-
-    <script>
-     
-     document.addEventListener( 'DOMContentLoaded', function () {
-		new Splide( '.splide', {
-            type   : 'loop',
-            perPage: 4,
-            focus  : 'center',
-        }  ).mount();
-            } );
-    </script>
 
 
     <!-- scripti komento bodyn ala-osaan-->

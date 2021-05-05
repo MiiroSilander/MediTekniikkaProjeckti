@@ -7,7 +7,6 @@ body {
     background-attachment: fixed;
     color: black;
     font-size: 25px;
-    text-align: center;
 }
 
 .dark-mode {
@@ -30,7 +29,7 @@ p {
   
 }
 .container {
-  padding: 0px 50px 10px 50px;
+  padding: 0px 100px 10px 100px;
   margin-top: 50px;
 }
 
@@ -541,3 +540,10 @@ p {
       width: 200px;
       height: 250px;
     }
+
+    .sliderheader{
+      color: #191f2e;
+      
+    }
+
+    

@@ -3,38 +3,28 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Borderlands 2</title>
+    <title>Borderlands 1</title>
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body class="dark-mode">
 
-     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
-     <div class="topnav">
-        
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
         <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
         <a href="Kotisivu.html">Home</a>
-        <a class="menu" onclick="openNav()">&#9776; Menu</a>
-        
 
-        <div class="search_menu">
-            <input id="search" type="text" placeholder="Search">
-            <button id="searchbutton">Search</button>
-            
-
-        </div>
     </div>
 
 
     <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="About.html">About</a> 
-        <a href="#">Contact</a>
-        <a href="map.html">Map</a>
+        <a class="active" href="About.html">About</a>
         <a href="SearchPage.html">Search</a>
-        <a href="#">Services</a>
-        
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
 
 
@@ -43,27 +33,14 @@
 
 
         <!--tähän printataan pelit-->
-
-
-
-
-    </main>
-
-
-
-
-
-
-
-
-    <script src="gamespage.js"></script>
+<script src="gamespage.js"></script>
 
     <script>
         let data = '{ "games" : [' +
 
-            '{ "name" : "Borderlands 2" , "url": "https://borderlands.fandom.com/wiki/Borderlands_2", "image" : "https://static.wikia.nocookie.net/borderlands/images/7/77/Borderlands2boxart3.jpg/revision/latest/scale-to-width-down/250?cb=20160301234253", "publisher": "2K Games",  "genres": "FPS/RPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "21.9.2012" , "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/kKVf5feSMEg"}]}';
+            '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "23.10.2009", "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/v3ZWbpce_Os" }]}';
 
-       
+        //muuttaa "data/json" luettavaks
         let database = JSON.parse(data);
 
 
@@ -87,15 +64,24 @@
 
        <p> About game</p>
             <p>
-           A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack. Make new friends, arm them with a bazillion weapons and fight alongside them in 4 player co-op on a relentless quest for revenge and redemption across the undiscovered and unpredictable living planet.
+            Lock, Load, & Face the Madness
+            Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way!
+            With its addictive action, frantic first-person shooter combat, massive arsenal of weaponry, RPG elements and four-player co-op*, Borderlands is a breakthrough experience that challenges all the conventions of modern shooters. Borderlands places you in the role of a mercenary on the lawless and desolate planet of Pandora, hell-bent on finding a legendary stockpile of powerful alien technology known as The Vault. 
             </p>
 
              </article>`;
+            }
+        
+</script>
 
-        }
 
 
-    </script>
+    </main>
+
+
+    
+
+    
 
 
 </body>

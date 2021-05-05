@@ -138,7 +138,7 @@ let database = JSON.parse(data);
 
 //function pelitkirjasto() {
     //printtaa "data" kannan -> kotisivu.html  "main" sisään.
-    for (let j = 0; j < database.games.length; j++) {
+  /*  for (let j = 0; j < database.games.length; j++) {
         mainElementti.innerHTML += `
         <article id="testi">
             <p> Name: ${database.games[j].name} </p>                         
@@ -146,7 +146,7 @@ let database = JSON.parse(data);
          <p>---------------------------------------------------------------------------------- </p>
          </article>`;
 
-    }
+    }*/
 
 
 let map;
@@ -166,3 +166,16 @@ let map;
       
     }
 
+    document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '#splide', {
+            type   : 'loop',
+            perPage: 5,
+            focus  : 'center',
+        }).mount();
+
+        new Splide( '#splide2', {
+            type   : 'loop',
+            perPage: 5,
+            focus  : 'center',
+        }).mount();
+            } );
