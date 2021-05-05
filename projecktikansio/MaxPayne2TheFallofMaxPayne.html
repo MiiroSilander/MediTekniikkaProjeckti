@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Max Payne 2: The Fall of Max Payne</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
+        <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
+        <a href="Kotisivu.html">Home</a>
+
+    </div>
+
+
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="About.html">About</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+    <main class="main-content">
+
+
+        <!--tähän printataan pelit-->
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="gamespage.js"></script>
+
+    <script>
+        let data = '{ "games" : [' +
+
+            '{ "name" : "Max Payne 2: The Fall of Max Payne" , "url": "https://www.rockstargames.com/games/maxpayne2", "image" : "https://upload.wikimedia.org/wikipedia/fi/9/95/Maxpayne2.jpg", "publisher": "Rockstar Games",  "genres": "Third-Person Shooter", "Developers" : "Remedy Entertainment", "Platform" : "Playstation 2, xBox, Windows", "Ratings" : "PEGI 18", "Realesed" : "14.10.2003", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/wkBbLqgcQco" }]}';
+
+
+        let database = JSON.parse(data);
+
+
+        for (let j = 0; j < database.games.length; j++) {
+            mainElementti.innerHTML += `
+                <article id="testi">
+                    <p> Name: ${database.games[j].name} </p>
+                     <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>
+                        <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
+                             <p> publisher: ${database.games[j].publisher}  </p>
+                                <p> genre: ${database.games[j].genres}</p>
+                                    <p> mode: ${database.games[j].Mode}</p>
+                             <p> Developers: ${database.games[j].Developers}</p>
+                            <p> Platform: ${database.games[j].Platform}</p>
+                         <p> Ratings: ${database.games[j].Ratings}</p>
+                    <p> Realesed: ${database.games[j].Realesed}</p>
+                    <p> Trailer: <br>
+                    <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </p>
+
+
+           <p> About game</p>
+                <p>
+                   Max Payne 2: The Fall of Max Payne is a violent, film-noir love story. Dark, tragic and intense, the in-depth story is a thrill-ride of shocking twists and revelations.
+
+                    His life in ruins, Max Payne finds himself back in the NYPD. During a routine murder investigation he runs into Mona Sax, a woman he thought dead, a femme fatale murder suspect. She holds the keys to the questions that haunt him. But nothing is simple in the dark and tragic night of New York City. An army of underworld thugs stands between Max and the answers he seeks. His journey deeper into his own personal hell continues.
+
+                    Max Payne 2: The Fall of Max Payne delivers an intense gameplay experience. It features fierce, yet stylish action sequences and the slow-motion gunplay that has become synonymous with the Max Payne series.
+                </p>
+
+                 </article>`;
+
+        }
+
+
+    </script>
+
+</body>
+</html>
