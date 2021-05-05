@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Home</title>
-    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide-core.min.css" />
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide.min.css" />
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    
 </head>
+
 <body class="dark-mode">
 
     <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
@@ -37,40 +39,45 @@
         <a href="map.html">Map</a>
     </div>
 
-<div class="img-container">
 
-</div>
 
 
     <main class="main-content">
+        <div class="img-container">
+
+        </div>
 
 
         <!--tähän printataan pelit-->
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide"><img src="img/BorderlandsBoxArt.jpg"></img></li>
-                    <li class="splide__slide"><img src="img/Borderlands2boxart3.jpg"></img></li>
-                    <li class="splide__slide"><img src="img/Borderlands_3_Kansi.jpg"></img></li>
-                    <li class="splide__slide"><img src="img/Alanwake.jpg"></img></li>
+                    <li class="splide__slide"><img class="slider-img" src="img/BorderlandsBoxArt.jpg"></img></li>
+                    <li class="splide__slide"><img class="slider-img" src="img/Borderlands2boxart3.jpg"></img></li>
+                    <li class="splide__slide"><img class="slider-img" src="img/Borderlands_3_Kansi.jpg"></img></li>
+                    <li class="splide__slide"><img class="slider-img" src="img/Alanwake.jpg"></img></li>
                     
-                    <li class="splide__slide"><img src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></li>
+                    <li class="splide__slide"><img class="slider-img" src="img/TQKAd8U6hnIFQIIcz6qnFh8C.webp"></img></li>
 
                 </ul>
             </div>
         </div>
+        
       
         
     </main>
     
+
     <script>
-        new Splide( '#splide', {
+     
+     document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '.splide', {
 	type   : 'loop',
-	perPage: 3,
-	perMove: 1,
-} ).mount();
+	perPage: 4,
+	focus  : 'center',
+}  ).mount();
+	} );
     </script>
-    
 
 
     <!-- scripti komento bodyn ala-osaan-->

@@ -593,3 +593,8 @@ p {
     z-index: 5;
   }
     /*caruselli loppuu */
+
+    .slider-img {
+      width: 200px;
+      height: 250px;
+    }
