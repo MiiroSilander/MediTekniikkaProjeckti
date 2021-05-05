@@ -551,5 +551,17 @@ p {
       
     }
 
-    
-    
+
+
+a:link {
+    color: #3e3845;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #756b82;
+    background-color: transparent;
+    text-decoration: none;
+}
+

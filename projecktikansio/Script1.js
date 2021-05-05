@@ -40,8 +40,6 @@ let data = '{ "games" : [' +
     
 
    
-
-
 //muuttaa "data/json" luettavaks
 let database = JSON.parse(data);
 
@@ -50,7 +48,6 @@ let database = JSON.parse(data);
 
 //Haku systeemi
 searchbutton.addEventListener('click', teeHaku);
-
 
 function teeHaku() {
 
