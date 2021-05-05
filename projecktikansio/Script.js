@@ -141,20 +141,8 @@ let database = JSON.parse(data);
     for (let j = 0; j < database.games.length; j++) {
         mainElementti.innerHTML += `
         <article id="testi">
-            <p> Name: ${database.games[j].name} </p>        
-             <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>                   
-             <a href="${database.games[j].Page}">   <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva"></a>                    
-                   <p> publisher: ${database.games[j].publisher}  </p>
-                       <p> genre: ${database.games[j].genres}</p>
-                        <p> mode: ${database.games[j].Mode}</p>
-                     <p> Developers: ${database.games[j].Developers}</p>
-                    <p> Platform: ${database.games[j].Platform}</p>
-                 <p> Ratings: ${database.games[j].Ratings}</p>
-                <p> Realesed: ${database.games[j].Realesed}</p>
-             <p> Trailer: <br>
-            <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </p>
-        
+            <p> Name: ${database.games[j].name} </p>                         
+             <a href="${database.games[j].Page}">   <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva"></a>
          <p>---------------------------------------------------------------------------------- </p>
          </article>`;
 
