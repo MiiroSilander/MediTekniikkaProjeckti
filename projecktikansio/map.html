@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Map</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
+  </head>
+  <body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
+        <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
+        <a href="Kotisivu.html">Home</a>
+        <div>
+            <input id="search" type="text" placeholder="Search">
+            <button id="searchbutton">Search</button>
+            <!--<button id="fuckyou">Fuck you</button> -->
+
+        </div>
+    </div>
+
+    
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="About.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="map.html">Map</a>
+
+    </div>
+
+    
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDok65zyoIGXh4JdPFQqSye4i4q86SEe00&callback=initMap">
+    </script>
+    <!-- scripti komento bodyn ala-osaan-->
+    <script src="Script.js"></script>
+  </body>
+</html>
