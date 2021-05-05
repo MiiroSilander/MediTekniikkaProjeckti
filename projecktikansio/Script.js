@@ -29,8 +29,10 @@ function access() {
 xhr.open('POST', 'https://api.igdb.com/v4/games/');
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.setRequestHeader('Client-ID', '9o9l55cbtqtzmpe9dv7hpgqepf99i6');
-xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-//xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Authorization', 'Bearer ' + 'duhjdb4v4e5jmd7v0443c684giljw4');
+xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS')
+xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
 xhr.send();
 //alert(token);
 }
@@ -153,6 +155,7 @@ let database = JSON.parse(data);
          </article>`;
 
     }
+<<<<<<< HEAD
 //}
 
 
@@ -162,3 +165,83 @@ let database = JSON.parse(data);
 
 
 
+=======
+
+let map;
+    let marker;
+
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: { lat: 60.173, lng: 24.941 },
+      });
+      marker = new google.maps.Marker({
+        map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: { lat: 60.173, lng: 24.941 },
+      });
+      
+    }
+<<<<<<< HEAD
+ //carousel start
+
+const sliders = document.querySelector(".carouselbox");
+var scrollPerClick;
+var ImagePadding = 20;
+
+showMoviesData();
+
+// Scroll Functionality
+var scrollAmount = 0;
+
+function sliderScrollLeft() {
+  sliders.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollPerClick),
+    behavior: "smooth",
+  });
+
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+
+  console.log("Scroll Amount: ", scrollAmount);
+}
+
+function sliderScrollRight() {
+  if (scrollAmount <= sliders.scrollWidth - sliders.clientWidth) {
+    sliders.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollPerClick),
+      behavior: "smooth",
+    });
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+
+// For showing dynamic contents only
+async function showMoviesData() {
+  const api_key = "47071116ad3913e09389a88eb1f895b6";
+  var result = await axios.get(
+    "https://api.themoviedb.org/3/discover/movie?api_key=" +
+      api_key +
+      "&primary_release_year=2017&sort_by=revenue.desc"
+  );
+
+  result = result.data.results;
+
+  result.map(function (cur, index) {
+    sliders.insertAdjacentHTML(
+      "beforeend",
+      `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
+    );
+  });
+
+  scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
+}
+//carousel end
+=======
+    
+>>>>>>> de788d6cfee25d7f5f0f9aa3a4ecf87225f77ce8
+>>>>>>> 36fbc58b722280a9828a593986ae35b209432736
