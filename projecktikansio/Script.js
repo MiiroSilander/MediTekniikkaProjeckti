@@ -152,4 +152,23 @@ let data = '{ "games" : [' +
 
     }
 
+
+let map;
+    let marker;
+
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: { lat: 60.173, lng: 24.941 },
+      });
+      marker = new google.maps.Marker({
+        map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: { lat: 60.173, lng: 24.941 },
+      });
+      
+    }
+
+
     
