@@ -43,12 +43,6 @@ const apiurl = "https://api.igdb.com/v4/games/";
 /*
 
 
-const searchButton = document.getElementById("searchbutton");
-const searchField = document.getElementById("search");
-
-searchButton.addEventListener('click', doQuery);
-
-
 function doQuery() {
     let searchWord = searchField.value;
     
@@ -102,9 +96,15 @@ for (let i = 0; i < obj.employees.length; i++) {
         document.getElementById("mySidenav").style.width = "0";
     } 
 
+    const searchButton = document.getElementById("searchbutton");
+    const searchField = document.getElementById("search");
 
+    searchButton.addEventListener('click', closeNav);
 
 const mainElementti = document.querySelector("main");
+
+// Alla tyhjä data stringi:
+// '{ "name" : "" , "url": "", "image" : "", "publisher": "",  "genres": "", "Developers" : "", "Platform" : "", "Ratings" : "", "Realesed" : "", "Mode" : "", "Trailer" : ""},' +
 
 //tähän lisäillä kaikki maholliset pelit mitä saadaan.
 let data = '{ "games" : [' +
@@ -119,15 +119,15 @@ let data = '{ "games" : [' +
     '{ "name" : "Max Payne 2: The Fall of Max Payne" , "url": "https://www.rockstargames.com/games/maxpayne2", "image" : "https://upload.wikimedia.org/wikipedia/fi/9/95/Maxpayne2.jpg", "publisher": "Rockstar Games",  "genres": "Third-Person Shooter", "Developers" : "Remedy Entertainment", "Platform" : "Playstation 2, xBox, Windows", "Ratings" : "PEGI 18", "Realesed" : "14.10.2003", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/wkBbLqgcQco" },' +
     '{ "name" : "Squad" , "url": "https://joinsquad.com/", "image" : "https://upload.wikimedia.org/wikipedia/en/d/de/Squad_%28videogame%29_2016_frontcover.png", "publisher": "Offworld Industries",  "genres": "Firts-person shooter, tactical shooter", "Developers" : "Offworld Industries", "Platform" : "Windows", "Ratings" : "PEGI 16", "Realesed" : "23.9.2020 (Early Access Realese 15.12.2015)", "Mode" : "Multiplayer", "Trailer" : "https://www.youtube.com/embed/UDnUD73gRXk" },' +
     '{ "name" : "The Witcher 3: Wild Hunt" , "url": "https://thewitcher.com/en/witcher3", "image" : "https://store-images.s-microsoft.com/image/apps.28990.69531514236615003.8f0d03d6-6311-4c21-a151-834503c2901a.d629260e-2bc4-4588-950c-f278cbc22a64?mode=scale&q=90&h=300&w=200", "publisher": "CD Projeckt",  "genres": "Action RPG, Hack and slash", "Developers" : "CD Projeckt Red", "Platform" : "Windows, Playstation 4, Xbox One, Nintendo Switch", "Ratings" : "PEGI 18", "Realesed" : "19.5.2015", "Mode" : "Singleplayer", "Trailer" : "https://www.youtube.com/embed/c0i88t0Kacs" },' +
-
+    '{ "name" : "World of Warcraft" , "url": "https://worldofwarcraft.com/en-us/", "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/WoW_Box_Art1.jpg/220px-WoW_Box_Art1.jpg", "publisher": "Blizzard Entertainment",  "genres": "MMORPG", "Developers" : "Blizzard Entertainment", "Platform" : "Windows, macOS", "Ratings" : "", "Realesed" : "23.11.2004", "Mode" : "Multiplayer", "Trailer" : "https://www.youtube.com/embed/vlVSJ0AvZe0"},' +
 
 
     //ei huomioida tätä alinta. Sulkee listan ja laitetaan viimeisen pelin tiedot tähän.
     '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 4/5, Xbox One, Windows", "Ratings" : "PEGI 18, ESRB: Mature", "Realesed" : "13.9.2019" }]}';
 
+    
 //muuttaa "data/json" luettavaks
-let database = JSON.parse(data);
-
+    let database = JSON.parse(data);
 
     //printtaa "data" kannan -> kotisivu.html  "main" sisään.
     for (let j = 0; j <  database.games.length; j++) {
@@ -135,7 +135,7 @@ let database = JSON.parse(data);
         <article>
             <p> Name: ${database.games[j].name} </p>        
              <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>                   
-                <img src="${database.games[j].image}" alt="sarjan kuva">
+                <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
                      <p> publisher: ${database.games[j].publisher}  </p>
                         <p> genre: ${database.games[j].genres}</p>
                             <p> mode: ${database.games[j].Mode}</p>
@@ -151,6 +151,7 @@ let database = JSON.parse(data);
          </article>`;
 
     }
+<<<<<<< HEAD
  //carousel start
 
 const sliders = document.querySelector(".carouselbox");
@@ -208,3 +209,6 @@ async function showMoviesData() {
   scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
 }
 //carousel end
+=======
+    
+>>>>>>> de788d6cfee25d7f5f0f9aa3a4ecf87225f77ce8
