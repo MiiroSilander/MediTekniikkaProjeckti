@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Alan Wake</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
+        <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
+        <a href="Kotisivu.html">Home</a>
+
+    </div>
+
+
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="About.html">About</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+    <main class="main-content">
+
+
+        <!--tähän printataan pelit-->
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="gamespage.js"></script>
+
+    <script>
+        let data = '{ "games" : [' +
+
+            '{ "name" : "Alan Wake" , "url": "https://www.remedygames.com/games/alan-wake/", "image" : "https://upload.wikimedia.org/wikipedia/fi/2/2e/Alanwake.jpg", "publisher": "Remedy Entertaiment, Microsoft",  "genres": "Third-person shooter, Action Adventure, Survival Horror", "Developers" : "Remedy Entertaiment, Nitro Games", "Platform" : "Windows, Xbox 360/One", "Ratings" : "PEGI 16", "Realesed" : "14.5.2010", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/Z_6iHChUNhE" }]}';
+
+
+        //muuttaa "data/json" luettavaks
+        let database = JSON.parse(data);
+
+
+        for (let j = 0; j < database.games.length; j++) {
+            mainElementti.innerHTML += `
+        <article id="testi">
+            <p> Name: ${database.games[j].name} </p>        
+             <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>                   
+                <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
+                     <p> publisher: ${database.games[j].publisher}  </p>
+                        <p> genre: ${database.games[j].genres}</p>
+                            <p> mode: ${database.games[j].Mode}</p>
+                     <p> Developers: ${database.games[j].Developers}</p>
+                    <p> Platform: ${database.games[j].Platform}</p>
+                 <p> Ratings: ${database.games[j].Ratings}</p>
+            <p> Realesed: ${database.games[j].Realesed}</p>
+            <p> Trailer: <br>
+            <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        
+
+   <p> About game</p>
+        <p>
+            When the wife of the best-selling writer Alan Wake disappears on their vacation, his search turns up pages from a thriller he doesn’t even remember writing. A Dark Presence stalks the small town of Bright Falls, pushing Wake to the brink of sanity in his fight to unravel the mystery and save his love.
+
+            Presented in the style of a TV series, Alan Wake features the trademark Remedy storytelling and pulse-pounding action sequences. As players dive deeper and deeper into the mystery, they’ll face overwhelming odds, plot twists, and cliffhangers. It’s only by mastering the Fight With Light combat mechanic that they can stay one step ahead of the darkness that spreads across Bright Falls.
+
+            With the body of an action game and the mind of a psychological thriller, Alan Wake’s intense atmosphere, deep and multilayered story, and exceptionally tense combat sequences provide players with an entertaining and original gaming experience.
+        </p>
+         
+         </article>`;
+
+        }
+
+
+    </script>
+</body>
+</html>

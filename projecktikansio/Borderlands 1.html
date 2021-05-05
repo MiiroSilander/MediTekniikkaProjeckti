@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Borderlands 1</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
+        <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
+        <a href="Kotisivu.html">Home</a>
+
+    </div>
+
+
+    <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="About.html">About</a>
+        <a href="SearchPage.html">Search</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+    <main class="main-content">
+
+
+        <!--tähän printataan pelit-->
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="gamespage.js"></script>
+
+    <script>
+        let data = '{ "games" : [' +
+
+            '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "23.10.2009", "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/v3ZWbpce_Os" }]}';
+
+        //muuttaa "data/json" luettavaks
+        let database = JSON.parse(data);
+
+
+        for (let j = 0; j < database.games.length; j++) {
+            mainElementti.innerHTML += `
+            <article id="testi">
+                <p> Name: ${database.games[j].name} </p>
+                 <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>
+                    <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva">
+                         <p> publisher: ${database.games[j].publisher}  </p>
+                            <p> genre: ${database.games[j].genres}</p>
+                                <p> mode: ${database.games[j].Mode}</p>
+                         <p> Developers: ${database.games[j].Developers}</p>
+                        <p> Platform: ${database.games[j].Platform}</p>
+                     <p> Ratings: ${database.games[j].Ratings}</p>
+                <p> Realesed: ${database.games[j].Realesed}</p>
+                <p> Trailer: <br>
+                <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+
+
+       <p> About game</p>
+            <p>
+            Lock, Load, & Face the Madness
+            Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way!
+            With its addictive action, frantic first-person shooter combat, massive arsenal of weaponry, RPG elements and four-player co-op*, Borderlands is a breakthrough experience that challenges all the conventions of modern shooters. Borderlands places you in the role of a mercenary on the lawless and desolate planet of Pandora, hell-bent on finding a legendary stockpile of powerful alien technology known as The Vault. 
+            </p>
+
+             </article>`;
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>

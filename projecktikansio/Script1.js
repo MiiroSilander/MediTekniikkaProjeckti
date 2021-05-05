@@ -1,103 +1,21 @@
-'use strict';
-/*
-let xhr = new XMLHttpRequest();
-// we defined the xhr
- 
+﻿// JavaScript source code
 
-xhr.open('POST', 'https://id.twitch.tv/oauth2/token?client_id=9o9l55cbtqtzmpe9dv7hpgqepf99i6&client_secret=b04grht2o906845vru9vac6etbxda3&grant_type=client_credentials', true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send();
 
-let token;
-xhr.onreadystatechange = function () {
-    if (this.readyState != 4) return;
 
-    if (this.status == 200) {
-        let data = JSON.parse(this.responseText);
-        token = data.access_token;
-        
-        console.log(data);
-        // we get the returned data
-    }
-    // end of state change: it can be after some time (async)
-};
-
-const fuButton = document.getElementById("fuckyou");
-fuckyou.addEventListener('click', access);
-
-function access() {
-xhr.open('POST', 'https://api.igdb.com/v4/games/');
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.setRequestHeader('Client-ID', '9o9l55cbtqtzmpe9dv7hpgqepf99i6');
-xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-//xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-xhr.send();
-//alert(token);
+// Kuinka paljon side bar liukuu sivun p��lle  xxxPX tai xxx%
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
 }
 
-// JavaScript source code
-const apiurl = "https://api.igdb.com/v4/games/";
-
-/*
-
-
-function doQuery() {
-    let searchWord = searchField.value;
-    
-    apiQuery = apiurl + searchWord;
-    console.log("Lähetettävä kysely: " + apiQuery);
-
-    doSearch(apiQuery);   
-    alert(apiQuery);
+// Set the width of the side navigation to 0 
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
 
-function doSearch(apiQuery)  {
+const searchButton = document.getElementById("searchbutton");
+const searchField = document.getElementById("search");
 
-    fetch(apiQuery).then(function(response) {
-        return response.json();
-    }).then(function(json) {
-        showResult(json);
-    });
-};
-
-function showResult(jsonData) {
-    
-    console.log(jsonData);
-}
-
-
-
-/*let text = '{ "employees" : [' +
-    '{ "firstName":"John" , "lastName":"Doe" },' +
-    '{ "firstName":"Anna" , "lastName":"Smith" },' +
-    '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-
-var obj = JSON.parse(text);
-
-for (let i = 0; i < obj.employees.length; i++) {
-    mainElementti.innerHTML += `
-            <p> Nimi: ${obj.employees[i].firstName} </p>
-                <p> Nimi:     ${obj.employees[i].lastName} </p>
-           
-             `
-        ;
-
-}*/
-
-    // Kuinka paljon side bar liukuu sivun p��lle  xxxPX tai xxx%
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "200px";
-    }
-
-    // Set the width of the side navigation to 0 
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    } 
-
-  //  const searchButton = document.getElementById("searchbutton");
-   // const searchField = document.getElementById("search");
-
- //   searchButton.addEventListener('click', closeNav);
+searchButton.addEventListener('click', closeNav);
 
 const mainElementti = document.querySelector("main");
 
@@ -107,7 +25,7 @@ const mainElementti = document.querySelector("main");
 //tähän lisäillä kaikki maholliset pelit mitä saadaan.
 let data = '{ "games" : [' +
 
-    '{ "name" : "Alan Wake" , "url": "https://www.remedygames.com/games/alan-wake/", "image" : "https://upload.wikimedia.org/wikipedia/fi/2/2e/Alanwake.jpg", "publisher": "Remedy Entertaiment, Microsoft",  "genres": "Third-person shooter, Action Adventure, Survival Horror", "Developers" : "Remedy Entertaiment, Nitro Games", "Platform" : "Windows, Xbox 360/One", "Ratings" : "PEGI 16", "Realesed" : "14.5.2010", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/Z_6iHChUNhE", "Page" : "AlanWakePage.html" },' +
+    '{ "name" : "Alan Wake" , "url": "https://www.remedygames.com/games/alan-wake/", "image" : "https://upload.wikimedia.org/wikipedia/fi/2/2e/Alanwake.jpg", "publisher": "Remedy Entertaiment, Microsoft",  "genres": "Third-person shooter, Action Adventure, Survival Horror", "Developers" : "Remedy Entertaiment, Nitro Games", "Platform" : "Windows, Xbox 360/One", "Ratings" : "PEGI 16", "Realesed" : "14.5.2010", "Mode" : "Singler-player", "Trailer" : "https://www.youtube.com/embed/Z_6iHChUNhE", "Page" : "AlanWakePage.html"  },' +
     '{ "name" : "Arma 3" , "url": "https://arma3.com/", "image" : "https://upload.wikimedia.org/wikipedia/fi/5/5b/Arma_3_kansikuva.jpg", "publisher": "Bohemia Interactive Studio",  "genres": "Tactical Shooter, War Simulator", "Developers" : "Bohemia Interactive", "Platform" : "Windows", "Ratings" : "PEGI 16", "Realesed" : "12.9.2013", "Mode" : "Singler-player, Multi-player", "Trailer" : "https://www.youtube.com/embed/kwxFrvE0bI4", "Page" : "Arma 3.html"},' +
     '{ "name" : "Borderlands 1" , "url": "https://borderlands.fandom.com/wiki/Borderlands", "image" : "https://static.wikia.nocookie.net/borderlands/images/d/d2/BorderlandsBoxArt.jpg/revision/latest/scale-to-width-down/567?cb=20091210094729", "publisher": "2K Games",  "genres": "FPRPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "23.10.2009", "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/v3ZWbpce_Os", "Page" : "Borderlands 1.html" },' +
     '{ "name" : "Borderlands 2" , "url": "https://borderlands.fandom.com/wiki/Borderlands_2", "image" : "https://static.wikia.nocookie.net/borderlands/images/7/77/Borderlands2boxart3.jpg/revision/latest/scale-to-width-down/250?cb=20160301234253", "publisher": "2K Games",  "genres": "FPS/RPG", "Developers" : "Gearbox Software", "Platform" : "Playstation 3/4, xbox 360/One, Nintendo Switch, Windows", "Ratings" : "PEGI 18", "Realesed" : "21.9.2012" , "Mode" : "Singler-player, 2-4 cooperative multiplayer", "Trailer" : "https://www.youtube.com/embed/kKVf5feSMEg", "Page" : "Borderlands 2.html"},' +
@@ -119,46 +37,56 @@ let data = '{ "games" : [' +
     '{ "name" : "The Witcher 3: Wild Hunt" , "url": "https://thewitcher.com/en/witcher3", "image" : "https://store-images.s-microsoft.com/image/apps.28990.69531514236615003.8f0d03d6-6311-4c21-a151-834503c2901a.d629260e-2bc4-4588-950c-f278cbc22a64?mode=scale&q=90&h=300&w=200", "publisher": "CD Projeckt",  "genres": "Action RPG, Hack and slash", "Developers" : "CD Projeckt Red", "Platform" : "Windows, Playstation 4, Xbox One, Nintendo Switch", "Ratings" : "PEGI 18", "Realesed" : "19.5.2015", "Mode" : "Singleplayer", "Trailer" : "https://www.youtube.com/embed/c0i88t0Kacs", "Page" : "TheWitcher3WildHunt.html" },' +
     '{ "name" : "World of Warcraft" , "url": "https://worldofwarcraft.com/en-us/", "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/WoW_Box_Art1.jpg/220px-WoW_Box_Art1.jpg", "publisher": "Blizzard Entertainment",  "genres": "MMORPG", "Developers" : "Blizzard Entertainment", "Platform" : "Windows, macOS", "Ratings" : "", "Realesed" : "23.11.2004", "Mode" : "Multiplayer", "Trailer" : "https://www.youtube.com/embed/vlVSJ0AvZe0", "Page" : "WorldofWarcraft.html"}]}';
 
-    
+
+   
+
+
 //muuttaa "data/json" luettavaks
 let database = JSON.parse(data);
 
 
 
-    //kotisivu.addEventListener('click', pelitkirjasto);
+
+//Haku systeemi
+searchbutton.addEventListener('click', teeHaku);
+
+function teeHaku() {
 
 
+    let hakusana = document.getElementById('search').value;
 
+    for (let i = 0; i < database.games.length; i++) {
+        if (database.games[i].name === hakusana) {
 
-//function pelitkirjasto() {
-    //printtaa "data" kannan -> kotisivu.html  "main" sisään.
-    for (let j = 0; j < database.games.length; j++) {
-        mainElementti.innerHTML += `
+            mainElementti.innerHTML += `
         <article id="testi">
-            <p> Name: ${database.games[j].name} </p>        
-             <p> URL for offisal website:   <a href = "${database.games[j].url}"> ${database.games[j].url}</a>   </p>                   
-             <a href="${database.games[j].Page}">   <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva"></a>                    
-                   <p> publisher: ${database.games[j].publisher}  </p>
-                       <p> genre: ${database.games[j].genres}</p>
-                        <p> mode: ${database.games[j].Mode}</p>
-                     <p> Developers: ${database.games[j].Developers}</p>
-                    <p> Platform: ${database.games[j].Platform}</p>
-                 <p> Ratings: ${database.games[j].Ratings}</p>
-                <p> Realesed: ${database.games[j].Realesed}</p>
-             <p> Trailer: <br>
-            <iframe width="540" height="360" src="${database.games[j].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p> Name: ${database.games[i].name} </p>        
+             <p> URL for official website:   <a href = "${database.games[i].url}"> ${database.games[i].url}</a>   </p>                   
+                <a href="${database.games[i].Page}">   <img width="360" height="500" src="${database.games[i].image}" alt="Sarjan kuva"></a> 
+                     <p> publisher: ${database.games[i].publisher}  </p>
+                        <p> genre: ${database.games[i].genres}</p>
+                            <p> mode: ${database.games[i].Mode}</p>
+                     <p> Developers: ${database.games[i].Developers}</p>
+                    <p> Platform: ${database.games[i].Platform}</p>
+                 <p> Ratings: ${database.games[i].Ratings}</p>
+            <p> Realesed: ${database.games[i].Realesed}</p>
+            <p> Trailer: <br>
+            <iframe width="540" height="360" src="${database.games[i].Trailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </p>
         
          <p>---------------------------------------------------------------------------------- </p>
          </article>`;
 
+
+
+        }
+
     }
-//}
 
+}
 
-
-
-
-
-
-
+//Jokaista hakua varten tyhjentää ylimääräiset haut
+function clearer() {
+    let letter = document.getElementById("testi");
+    letter.remove();
+}
