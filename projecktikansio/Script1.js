@@ -51,13 +51,14 @@ let database = JSON.parse(data);
 //Haku systeemi
 searchbutton.addEventListener('click', teeHaku);
 
+
 function teeHaku() {
 
 
     let hakusana = document.getElementById('search').value;
 
     for (let i = 0; i < database.games.length; i++) {
-        if (database.games[i].name === hakusana) {
+        if (database.games[i].name === hakusana || database.games[i].Search === hakusana) {
 
             mainElementti.innerHTML += `
         <article id="testi">
@@ -85,6 +86,8 @@ function teeHaku() {
     }
 
 }
+
+
 
 //Jokaista hakua varten tyhjentää ylimääräiset haut
 function clearer() {

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Map</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide.min.css" />
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     
-  </head>
-  <body class="dark-mode">
+</head>
 
-      <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
-      <div class="topnav">
-        
+<body class="dark-mode">
+
+    <!-- Ylä navigointi bar, "home"  pääsee etusivulle ja "search" ominaisuus, ja lisää jotakin?-->
+    <div class="topnav">
         <!-- Use any element to open the sidenav -->
+        <a style="font-size:17px;cursor:pointer" onclick="openNav()">&#9776; Menu</a>
         <a href="Kotisivu.html">Home</a>
         <a class="menu" onclick="openNav()">&#9776; Menu</a>
         
@@ -21,38 +23,27 @@
         <div class="search_menu">
             <input id="search" type="text" placeholder="Search">
             <button id="searchbutton">Search</button>
-            
-
         </div>
     </div>
 
+    <main class="main-content">
+        <h3 style="font-size: 36px;">Group H</h3>
+        <div id="nimet">
+            <p>Henri Konttinen, <br>Henri.Konttinen2@metropolia.fi</p>
+            <p>Minna Niemelä, <br>Minna.Niemela@metropolia.fi</p>
+            <p>Miiro Silander, <br>Miiro.Silander@metropolia.fi</p>
+        </div>
+    </main>
 
     <!-- Sidebar jutut,  "MENU"  avaa side bar, sinne jotakin?-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<<<<<<< HEAD
-        <a href="About.html">About</a> 
-        <a href="#">Contact</a>
-=======
         <a href="About.html">About</a>
         <a href="SearchPage.html">Search</a>
         <a href="contact.html">Contact</a>
->>>>>>> e1a54f22fa81153785983db5ddf3e62b9489e705
         <a href="map.html">Map</a>
-        <a href="SearchPage.html">Search</a>
-        <a href="#">Services</a>
-        
     </div>
 
-
-    
-    <div id="map"></div>
-
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDok65zyoIGXh4JdPFQqSye4i4q86SEe00&callback=initMap">
-    </script>
-    <!-- scripti komento bodyn ala-osaan-->
     <script src="Script.js"></script>
-  </body>
+</body>
 </html>
