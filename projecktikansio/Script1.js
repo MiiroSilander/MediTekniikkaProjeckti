@@ -19,9 +19,6 @@ searchButton.addEventListener('click', closeNav);
 
 const mainElementti = document.querySelector("main");
 
-// Alla tyhjä data stringi:
-// '{ "name" : "" , "url": "", "image" : "", "publisher": "",  "genres": "", "Developers" : "", "Platform" : "", "Ratings" : "", "Realesed" : "", "Mode" : "", "Trailer" : "" , "Page" : "", "Search" : ""},' +
-
 //tähän lisäillä kaikki maholliset pelit mitä saadaan.
 let data = '{ "games" : [' +
 
@@ -86,7 +83,7 @@ function teeHaku() {
 
 
 
-//Jokaista hakua varten tyhjentää ylimääräiset haut
+//Jokaista hakua varten tyhjentää ylimääräiset haut sivulta
 function clearer() {
     let letter = document.getElementById("testi");
     letter.remove();

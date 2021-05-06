@@ -1,90 +1,5 @@
 'use strict';
-/*
-let xhr = new XMLHttpRequest();
-// we defined the xhr
- 
 
-xhr.open('POST', 'https://id.twitch.tv/oauth2/token?client_id=9o9l55cbtqtzmpe9dv7hpgqepf99i6&client_secret=b04grht2o906845vru9vac6etbxda3&grant_type=client_credentials', true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send();
-
-let token;
-xhr.onreadystatechange = function () {
-    if (this.readyState != 4) return;
-
-    if (this.status == 200) {
-        let data = JSON.parse(this.responseText);
-        token = data.access_token;
-        
-        console.log(data);
-        // we get the returned data
-    }
-    // end of state change: it can be after some time (async)
-};
-
-const fuButton = document.getElementById("fuckyou");
-fuckyou.addEventListener('click', access);
-
-function access() {
-xhr.open('POST', 'https://api.igdb.com/v4/games/');
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.setRequestHeader('Client-ID', '9o9l55cbtqtzmpe9dv7hpgqepf99i6');
-xhr.setRequestHeader('Authorization', 'Bearer ' + 'duhjdb4v4e5jmd7v0443c684giljw4');
-xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-xhr.setRequestHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS')
-xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
-xhr.send();
-//alert(token);
-}
-
-// JavaScript source code
-const apiurl = "https://api.igdb.com/v4/games/";
-
-/*
-
-
-function doQuery() {
-    let searchWord = searchField.value;
-    
-    apiQuery = apiurl + searchWord;
-    console.log("Lähetettävä kysely: " + apiQuery);
-
-    doSearch(apiQuery);   
-    alert(apiQuery);
-}
-
-function doSearch(apiQuery)  {
-
-    fetch(apiQuery).then(function(response) {
-        return response.json();
-    }).then(function(json) {
-        showResult(json);
-    });
-};
-
-function showResult(jsonData) {
-    
-    console.log(jsonData);
-}
-
-
-
-/*let text = '{ "employees" : [' +
-    '{ "firstName":"John" , "lastName":"Doe" },' +
-    '{ "firstName":"Anna" , "lastName":"Smith" },' +
-    '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-
-var obj = JSON.parse(text);
-
-for (let i = 0; i < obj.employees.length; i++) {
-    mainElementti.innerHTML += `
-            <p> Nimi: ${obj.employees[i].firstName} </p>
-                <p> Nimi:     ${obj.employees[i].lastName} </p>
-           
-             `
-        ;
-
-}*/
 
     // Kuinka paljon side bar liukuu sivun p��lle  xxxPX tai xxx%
     function openNav() {
@@ -102,9 +17,6 @@ for (let i = 0; i < obj.employees.length; i++) {
  //   searchButton.addEventListener('click', closeNav);
 
 const mainElementti = document.querySelector("main");
-
-// Alla tyhjä data stringi:
-// '{ "name" : "" , "url": "", "image" : "", "publisher": "",  "genres": "", "Developers" : "", "Platform" : "", "Ratings" : "", "Realesed" : "", "Mode" : "", "Trailer" : ""},' +
 
 //tähän lisäillä kaikki maholliset pelit mitä saadaan.
 let data = '{ "games" : [' +
@@ -132,22 +44,6 @@ let database = JSON.parse(data);
 
 
 
-    //kotisivu.addEventListener('click', pelitkirjasto);
-
-
-
-
-//function pelitkirjasto() {
-    //printtaa "data" kannan -> kotisivu.html  "main" sisään.
-  /*  for (let j = 0; j < database.games.length; j++) {
-        mainElementti.innerHTML += `
-        <article id="testi">
-            <p> Name: ${database.games[j].name} </p>                         
-             <a href="${database.games[j].Page}">   <img width="360" height="500" src="${database.games[j].image}" alt="Sarjan kuva"></a>
-         <p>---------------------------------------------------------------------------------- </p>
-         </article>`;
-
-    }*/
 
 
 let map;
